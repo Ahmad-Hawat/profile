@@ -1,0 +1,260 @@
+/* Starting reset */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Ending reset */
+
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@100;200;300;400;500;600;700;800;900&family=Outfit:wght@400;700&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    font-family: "Heebo",system-ui;
+    font-weight: normal;
+    transition-duration: 0.5s;
+}
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+:root{ 
+    font-size: 15px;
+    --dark-color1: #022b3a;
+    --dark-color2: #1f7a8c;
+    --mid-color: #bfdbf7;
+    --light-color2: #e1e5f2;
+    --light-color1: #ffffff;
+}
+
+/* ------- NAVBAR section ------- */
+
+nav{
+    background-color: var(--mid-color);
+}
+.nav{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+}
+.navLogo{
+    width: 6.66rem;
+    height: auto;
+/*     background-color: var(--light-color1); */
+    position: relative;
+}
+nav::before{
+    content: '';
+    width: 12.6rem;
+    height: 12.6rem;
+    position: absolute;
+    background-color: var(--light-color1);
+    top: 0;
+    left: 7%;
+    display: flex;
+    transform: translatey(-100px) rotatez(45deg);
+    border-radius: 0 0 25px 0;
+}
+.nav ul{
+    height: 100%;
+    display: flex;
+    text-transform: uppercase;
+    align-content: center;
+/*     background-color: var(--dark-color2); */
+}
+#menuBtn{
+    display: none;
+}
+.nav ul li{
+    margin-left: 0.66rem;
+    padding: 2rem .66rem;
+}
+.nav ul li:hover{
+    background-color: var(--dark-color2);
+}
+.nav ul li a{
+    color: var(--dark-color2);
+}
+.nav ul li:hover a{
+    color: var(--light-color1);
+}
+
+/* ----------- HEADER Section ----------- */
+
+header{
+    background-color: var(--dark-color1);
+    color: var(--light-color2);
+}
+.header{
+    width: 80%;
+    margin: auto;
+    padding: 0.66rem 0;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+    
+}
+.headImgSec{
+    position: relative;
+    width: 30%;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+.headImgSec img{
+    height: 25rem;
+    padding: 2rem 0;
+    z-index: 1;
+    position: inherit;
+}
+.hsvg svg{
+    position: absolute;
+    right: 0;
+    top: 44%;
+    transform: scale(300%) rotate(120deg);
+    z-index: 0;
+    /* height: 20rem; */
+}
+.headContent{
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 0.66rem;
+}
+.headContent button{
+    width: 40%;
+    padding: 0.33rem;
+    background-color: var(--light-color1);
+    outline: none;
+    border: none;
+    border-radius: 0.3rem;
+}
+.headContent a{
+    color: var(--dark-color1);
+}
+.headContent button:hover{
+    width: 45%;
+}
+
+.headContent button:hover a{
+    letter-spacing: 0.1rem;
+    color: var(--dark-color2);
+}
+
+/* ----------- SKILLS Section ----------- */
+
+.skillsSection{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+}
+
+/* ----------- FOOTER Section ----------- */
+footer{
+    background-color: var(--dark-color1);
+}
+footer p{
+    padding: 1rem 0;
+    text-align: center;
+    color: var(--light-color2);
+
+}
+/* --------- Media query section -------- */
+
+/* ### Xlarge screens ≥ 1200px ### */
+@media (max-width : 1200px){
+
+}
+
+/* ### Large screens ≥ 992px ### */
+@media (max-width : 992px){
+nav::before{
+  width: 12.6rem;
+  height: 12.6rem;
+  left: 5.5%;
+}
+}
+
+/* ### Medium screens ≥ 768px ### */
+@media (max-width : 768px){
+nav::before{
+  width: 12.6rem;
+  height: 12.6rem;
+  left: 4.5%;
+}
+}
+
+/* ### Small screens ≥ 576px ### */
+@media (max-width : 576px){
+nav::before{
+  width: 12.6rem;
+  height: 12.6rem;
+  left: 2.5%;
+}
+#vul{
+    display: none;
+}
+#menuBtn{
+    display: flex;
+    border: solid 1px var(--light-color1);
+    border-radius: .5rem;
+    outline: none;
+    background-color: transparent;
+    color: var(--light-color1);
+    font-size: 2rem;
+    padding: 0.4rem .6rem;
+    cursor: pointer;
+}
+#menuBtn:hover, #menBtn:focus{
+    background-color: var(--light-color2);
+    color: var(--dark-color2);
+}
+}
