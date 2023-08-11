@@ -1,25 +1,5 @@
 /* Starting reset */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
 
 /* HTML5 display-role reset for older browsers */
 
@@ -75,6 +55,8 @@ ul{
 
 nav{
     background-color: var(--mid-color);
+    top: 0;
+    position: sticky;
 }
 .nav{
     width: 80%;
@@ -109,6 +91,9 @@ nav::before{
     align-content: center;
 /*     background-color: var(--dark-color2); */
 }
+.hul{
+    display: none;
+}
 #menuBtn{
     display: none;
 }
@@ -125,11 +110,16 @@ nav::before{
 .nav ul li:hover a{
     color: var(--light-color1);
 }
-
+.none{
+    display: none;
+}
 /* ----------- HEADER Section ----------- */
 
 header{
-    background-color: var(--dark-color1);
+    background-image: url("./assets/bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
     color: var(--light-color2);
 }
 .header{
@@ -144,25 +134,13 @@ header{
     
 }
 .headImgSec{
-    position: relative;
     width: 30%;
-    z-index: 1;
     display: flex;
     justify-content: center;
 }
 .headImgSec img{
     height: 25rem;
     padding: 2rem 0;
-    z-index: 1;
-    position: inherit;
-}
-.hsvg svg{
-    position: absolute;
-    right: 0;
-    top: 44%;
-    transform: scale(300%) rotate(120deg);
-    z-index: 0;
-    /* height: 20rem; */
 }
 .headContent{
     display: flex;
@@ -241,6 +219,29 @@ nav::before{
 }
 #vul{
     display: none;
+}
+.hul{
+    display: flex;
+    flex-flow: column nowrap;
+    background-color: var(--dark-color1);
+    align-items: center;
+    gap: 1rem;
+    padding-top: 2rem;
+}
+.hul li{
+    width: 100%;
+    text-align: center;
+    padding: 1rem 0;
+}
+.hul li:hover{
+    background-color: var(--dark-color2);
+}
+.hul li a{
+    color: var(--light-color2);
+    font-size: 2rem;
+}
+.hul li:hover a{
+    color: var(--light-color1);
 }
 #menuBtn{
     display: flex;
